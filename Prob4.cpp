@@ -26,7 +26,9 @@ int main() {
         }
         NewMin = ((Hora % 100) + DurMin)%60;
         NewHor = ((Hora/100) + DurHor + Minx)%2400;
-
+        if (NewHor>23){
+            NewHor -= 24;
+        }
         if (NewMin < 10) {
             std::cout << "La hora es " << NewHor << ":" << "0" << NewMin << std::endl;
         } 
